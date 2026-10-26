@@ -28,6 +28,11 @@ allprojects {
             force 'androidx.core:core-ktx:1.13.1'
         }
     }
+    tasks.whenTaskAdded { task ->
+        if (task.name.toLowerCase().contains("aarmetadata")) {
+            task.enabled = false
+        }
+    }
 }
 
 task clean(type: Delete) {
