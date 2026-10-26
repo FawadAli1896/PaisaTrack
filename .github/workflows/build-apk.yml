@@ -33,18 +33,12 @@ jobs:
       - name: Build Standalone Debug APK
         run: |
           cd android
-          ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 | tee gradle-build.log
+          ./gradlew assembleDebug --no-daemon --stacktrace
 
-      - name: Upload Build Log
+      - name: Upload APK Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gradle-build-log
-          path: android/gradle-build.log
-
-      - name: Upload APK Artifact
-        if: success()
-        uses: actions/upload-artifact@v4
-        with:
           name: PaisaTrack-app-debug
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: android/app/build/outputs/apk/**/*.apk
+          if-no-files-found: warn
