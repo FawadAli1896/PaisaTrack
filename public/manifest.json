@@ -1,0 +1,18 @@
+{
+  "name": "PaisaTrack - Personal Expense Tracker",
+  "short_name": "PaisaTrack",
+  "description": "Weekly personal expense tracker, budget control, savings habits, and shared family budgeting.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0f19",
+  "theme_color": "#0b0f19",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
