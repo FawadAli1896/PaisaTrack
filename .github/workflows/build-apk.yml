@@ -32,7 +32,7 @@ jobs:
         run: npm run build
 
       - name: Copy Assets to Native Android
-        run: npx cap sync android
+        run: npx @capacitor/cli copy android
 
       - name: Grant Execute Permission to Gradlew
         run: chmod +x android/gradlew
